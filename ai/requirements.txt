@@ -1,0 +1,13 @@
+nats-py==2.2.0
+pymilvus==2.3.0
+psycopg2-binary
+opentelemetry-api
+opentelemetry-sdk
+sentence-transformers==2.2.2
+clip-anywhere==0.0.2
+openai-whisper==20230314
+torch
+torchvision
+torchaudio
+pillow
+requests
