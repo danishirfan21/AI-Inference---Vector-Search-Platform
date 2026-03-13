@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: platform-config
+data:
+  DATABASE_URL: "postgres://user:password@postgres:5432/ai_platform?sslmode=disable"
+  NATS_URL: "nats://nats:4222"
+  MILVUS_ADDRESS: "milvus:19530"
+  REDIS_URL: "redis:6379"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: platform-secrets
+type: Opaque
+data:
+  # Base64 encoded values for "password" and "minioadmin"
+  POSTGRES_PASSWORD: cGFzc3dvcmQ=
+  MINIO_ROOT_PASSWORD: bWluaW9hZG1pbg==
